@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Wowo Cars - Showroom Mobil Impian</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <i class="fa-solid fa-car-side"></i> Wowo<span>Cars</span>
+      </a>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#hero" class="nav-link active">Beranda</a>
+        <a href="#catalog" class="nav-link">Katalog Mobil</a>
+        <a href="#features" class="nav-link">Keunggulan</a>
+        <a href="#contact" class="nav-link">Kontak</a>
+      </nav>
+      <div class="nav-actions">
+        <div class="search-box">
+          <input type="text" id="search-input" placeholder="Cari mobil...">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <span class="badge">Showroom Mobil wowo Terpercaya</span>
+      <h1>Temukan Mobil Impian Anda dengan Performa Terbaik</h1>
+      <p>Jelajahi berbagai koleksi mobil eksklusif dengan harga terbaik dan kualitas terjamin.</p>
+      <div class="hero-buttons">
+        <a href="#catalog" class="btn btn-primary">Lihat Katalog</a>
+        <a href="#contact" class="btn btn-outline">Hubungi wowo Cars</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Keunggulan -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-card">
+          <i class="fa-solid fa-shield-halved"></i>
+          <h3>Garansi Resmi</h3>
+          <p>Setiap unit kendaraan dijamin kualitasnya dengan garansi resmi dan inspeksi ketat yang di lakukan oleh wowo.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fa-solid fa-tags"></i>
+          <h3>Harga Terbaik</h3>
+          <p>Dapatkan penawaran harga transparan tanpa ada biaya tersembunyi (takut di kira korupsi).</p>
+        </div>
+        <div class="feature-card">
+          <i class="fa-solid fa-headset"></i>
+          <h3>Layanan 24/7</h3>
+          <p>Tim profesional kami siap membantu kebutuhan konsultasi kendaraan Anda kapan saja ( mirip kaya warung madura 24 Jam ) .</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Katalog Mobil -->
+  <section class="catalog" id="catalog">
+    <div class="container">
+      <div class="section-title">
+        <h2>Katalog Mobil Mahal</h2>
+        <p>Pilih mobil pilihan Anda dari koleksi lengkap kami ( tidak ada tank )</p>
+      </div>
+
+      <!-- Loading State & Error State -->
+      <div id="loading" class="state-container">
+        <div class="spinner"></div>
+        <p>Memuat data mobil...</p>
+      </div>
+      
+      <div id="error" class="state-container hidden">
+        <i class="fa-solid fa-circle-exclamation error-icon"></i>
+        <p id="error-message">Gagal mengambil data dari server.</p>
+        <button class="btn btn-primary" onclick="fetchCars()">Coba Lagi</button>
+      </div>
+
+      <!-- Grid Tempat Render Mobil dari API -->
+      <div class="car-grid" id="car-grid"></div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer" id="contact">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <i class="fa-solid fa-car-side"></i> <span>Wowo Cars</span>
+        </a>
+        <p>Jika Mencari Mobil Impian, Semacam Mobil Esemka,Tank,Jet,Gerobak sodok,Angkot ( di sini tidak ada ya).</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="#hero">Beranda</a></li>
+          <li><a href="#catalog">Katalog</a></li>
+          <li><a href="#features">Keunggulan</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Kontak Kami</h4>
+        <p><i class="fa-solid fa-location-dot"></i> Salatiga, Jawa Tengah</p>
+        <p><i class="fa-solid fa-envelope"></i> info@wowocars.com</p>
+        <p><i class="fa-solid fa-phone"></i> +62 851 4981 5775</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Wowo Cars. All Rights Reserved. Sigma Mewing.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
